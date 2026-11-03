@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f2eb" />
+  <meta name="description" content="山海里，以时令为引，以本味为席。预约一场关于山海风土的当代中餐体验。" />
+  <title>山海里 · 当代中餐</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+:root { --paper:#f5f2eb; --ink:#252922; --muted:#77786f; --olive:#596348; --line:#d9d5ca; --serif:'Noto Serif SC',serif; --sans:'DM Sans','Noto Sans SC',sans-serif; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); }
+    a { color:inherit; text-decoration:none; }
+    button { font:inherit; }
+    .topline { height:34px; padding:0 6.2%; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); color:var(--muted); font-size:10px; letter-spacing:.13em; }
+    .topline span:last-child { display:flex; gap:24px; }
+    header { height:82px; padding:0 6.2%; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); position:relative; z-index:2; }
+    .brand { display:flex; align-items:center; gap:12px; }
+    .brand-mark { width:37px;height:37px;border:1px solid var(--olive);border-radius:50%;display:grid;place-items:center;color:var(--olive);font-family:var(--serif);font-size:19px; }
+    .brand-name { font-family:var(--serif);font-size:20px;letter-spacing:.19em;line-height:1.2; }
+    .brand-name small { display:block; font:9px var(--sans); letter-spacing:.2em; color:var(--muted); margin-top:5px; }
+    nav { display:flex; gap:37px; align-items:center; font-size:12px; letter-spacing:.06em; }
+    nav a { transition:color .2s; } nav a:hover { color:var(--olive); }
+    .nav-reserve { background:var(--olive); color:#fff; padding:13px 22px; font-size:11px; letter-spacing:.1em; transition:background .2s; }
+    .nav-reserve:hover { background:#3f4935; }
+    .hero { min-height:600px; height:min(690px,calc(100vh - 116px)); position:relative; display:flex; align-items:center; overflow:hidden; background:#343a2e; color:#fff; }
+    .hero-image { position:absolute;inset:0;background:linear-gradient(90deg,rgba(25,30,23,.78) 0%,rgba(25,30,23,.51) 43%,rgba(25,30,23,.08) 100%),url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2200&q=88') center 54%/cover; transform:scale(1.01); }
+    .hero-content { position:relative; width:min(1180px,88%); margin:0 auto; padding-bottom:10px; }
+    .eyebrow { font-size:10px; letter-spacing:.28em; text-transform:uppercase; color:#d5d2bf; display:flex; align-items:center; gap:13px; }
+    .eyebrow:before { content:''; width:31px; height:1px; background:#b5b69f; }
+    h1 { font:500 clamp(43px,6vw,78px)/1.34 var(--serif); letter-spacing:.1em; margin:27px 0 18px; }
+    .hero-content p { font:15px/2 var(--serif); color:rgba(255,255,255,.82); letter-spacing:.12em; margin:0; }
+    .hero-actions { margin-top:39px; display:flex;align-items:center;gap:27px; }
+    .button-light { background:var(--paper);color:var(--ink);padding:16px 28px;font-size:11px;letter-spacing:.12em;display:inline-flex;gap:22px;align-items:center; }
+    .hero-note { font-size:10px;letter-spacing:.1em;color:rgba(255,255,255,.75); }
+    .hero-index { position:absolute;right:6.2%;bottom:35px;font-size:10px;letter-spacing:.16em;color:rgba(255,255,255,.8); }
+    .intro { padding:89px 6.2% 88px; display:grid; grid-template-columns:1fr 1.15fr; gap:9%; align-items:center; max-width:1440px; margin:auto; }
+    .section-label { color:var(--olive);font-size:10px;letter-spacing:.22em;text-transform:uppercase; }
+    h2 { font:500 clamp(28px,3vw,39px)/1.55 var(--serif);letter-spacing:.08em;margin:19px 0 20px; }
+    .intro-copy p { max-width:455px;font:13px/2.2 var(--serif);color:#77786f;letter-spacing:.04em;margin:0; }
+    .text-link { display:inline-flex;align-items:center;gap:20px;margin-top:29px;font-size:10px;letter-spacing:.15em;color:var(--olive);padding-bottom:9px;border-bottom:1px solid #aeb39e; }
+    .intro-photo { height:300px;position:relative; }
+    .intro-photo img { width:100%;height:100%;object-fit:cover;display:block; }
+    .photo-caption { position:absolute;right:-13px;bottom:-18px;background:var(--paper);padding:14px 20px;font:11px var(--serif);letter-spacing:.12em;color:var(--olive); }
+    .season { background:#eae8df;padding:75px 6.2% 84px; }
+    .season-inner { max-width:1200px;margin:auto; }
+    .section-heading { display:flex;justify-content:space-between;align-items:end;margin-bottom:31px; }
+    .section-heading h2 { margin:10px 0 0; }
+    .season-aside { font:11px var(--serif);color:var(--muted);letter-spacing:.08em;padding-bottom:8px; }
+    .dishes { display:grid;grid-template-columns:repeat(3,1fr);gap:22px; }
+    .dish { min-width:0; }
+    .dish-image { height:260px;overflow:hidden;background:#d5d1c5; }
+    .dish-image img { width:100%;height:100%;object-fit:cover;transition:transform .5s;display:block; }
+    .dish:hover img { transform:scale(1.04); }
+    .dish-meta { display:flex;justify-content:space-between;align-items:center;margin-top:17px; }
+    .dish h3 { font:500 17px var(--serif);letter-spacing:.08em;margin:0; }
+    .dish .origin { color:var(--muted);font-size:9px;letter-spacing:.1em; }
+    .dish .price { color:var(--olive);font-size:12px;letter-spacing:.03em;white-space:nowrap; }
+    .dish p { font:11px/1.8 var(--serif);color:var(--muted);margin:9px 0 0; }
+    .experience { padding:88px 6.2%;display:grid;grid-template-columns:1fr 1fr;gap:9%;align-items:center;max-width:1440px;margin:auto; }
+    .experience-image { height:415px;position:relative; }
+    .experience-image img { width:100%;height:100%;object-fit:cover; }
+    .experience-copy { padding:10px 0; }
+    .experience-copy p { max-width:440px;font:13px/2.2 var(--serif);color:var(--muted); }
+    .facts { display:flex;gap:34px;margin-top:29px;padding-top:22px;border-top:1px solid var(--line); }
+    .fact strong { display:block;font:20px var(--serif);font-weight:400;letter-spacing:.06em; }
+    .fact span { display:block;font-size:9px;letter-spacing:.12em;color:var(--muted);margin-top:7px; }
+    .booking { background:var(--olive);color:#fff;padding:55px 6.2%; }
+    .booking-inner { max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:30px; }
+    .booking h2 { margin:0 0 8px;font-size:28px; }
+    .booking p { margin:0;color:#d8dbd0;font:11px var(--serif);letter-spacing:.08em; }
+    .booking a { border:1px solid rgba(255,255,255,.65);padding:15px 25px;font-size:10px;letter-spacing:.15em;white-space:nowrap; }
+    footer { padding:37px 6.2%;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:9px;letter-spacing:.09em; }
+    .footer-brand { font:16px var(--serif);color:var(--ink);letter-spacing:.16em; }
+    .menu-toggle { display:none;background:none;border:0;color:var(--ink);font-size:22px; }
+    @media(max-width:760px) {
+      .topline { padding:0 5%;font-size:8px; }.topline span:last-child { gap:10px; }
+      header { padding:0 5%;height:70px; }.brand-name {font-size:17px}.menu-toggle {display:block}
+      nav { display:none;position:absolute;top:69px;left:0;right:0;background:var(--paper);padding:20px 5% 25px;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid var(--line); }
+      nav.open { display:flex; } nav a { padding:13px 0;border-bottom:1px solid var(--line); } nav .nav-reserve { text-align:center;margin-top:13px;border:0;padding:14px; }
+      .hero { min-height:570px;height:calc(88vh - 100px); }.hero-image {background-position:58% center;background-image:linear-gradient(90deg,rgba(25,30,23,.72),rgba(25,30,23,.25)),url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1300&q=85')}
+      .hero-content {width:88%}.hero-content p {font-size:13px}.hero-note {display:none}
+      .intro {padding:65px 7%;grid-template-columns:1fr;gap:35px}.intro-photo {height:250px;margin-right:12px}
+      .season {padding:62px 7%}.section-heading {align-items:start;flex-direction:column;gap:8px}.dishes {grid-template-columns:1fr;gap:30px}.dish-image {height:280px}
+      .experience {padding:65px 7%;grid-template-columns:1fr;gap:35px}.experience-image {height:300px;order:2}.experience-copy {order:1}.facts {gap:22px}
+      .booking {padding:42px 7%}.booking-inner {align-items:flex-start;flex-direction:column}.booking h2 {font-size:24px}
+      footer {padding:27px 7%;gap:18px;flex-wrap:wrap}.footer-brand {width:100%}
+    }
+  </style>
+</head>
+<body>
+<div class="topline"><span>当季风物 · 本味之席</span><span><span>杭州 · 湖滨店</span><span>每日 11:30—22:00</span></span></div>
+  <header>
+    <a class="brand" href="#top" aria-label="山海里首页"><span class="brand-mark">山</span><span class="brand-name">山海里<small>SHAN HAI LI · CUISINE</small></span></a>
+    <button class="menu-toggle" aria-label="打开菜单" aria-expanded="false">☰</button>
+    <nav id="navigation"><a href="#story">关于山海</a><a href="#season">时令菜单</a><a href="#experience">用餐体验</a><a href="#visit">门店信息</a><a class="nav-reserve" href="#reserve">预约席位&nbsp; ↗</a></nav>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-image"></div>
+      <div class="hero-content"><div class="eyebrow">A TASTE OF LAND & SEA</div><h1>山海有味<br/>四时成席</h1><p>循着季节的脚步，寻回食材本来的味道。</p><div class="hero-actions"><a class="button-light" href="#season">探索当季菜单 <span>↗</span></a><span class="hero-note">从一方水土，到一席风味</span></div></div>
+      <div class="hero-index">01&nbsp; — &nbsp;03</div>
+    </section>
+    <section class="intro" id="story">
+      <div class="intro-copy"><div class="section-label">OUR PHILOSOPHY</div><h2>让风土，成为餐桌上的主角。</h2><p>山海里始于一个简单的念头：好好对待食材，也好好对待每一次相聚。我们循着节气寻味，与产地相知，用当代的手法，呈现熟悉而新鲜的中式风味。</p><a class="text-link" href="#experience">认识山海里 <span>→</span></a></div>
+      <div class="intro-photo"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=85" alt="温暖雅致的山海里用餐空间"/><div class="photo-caption">一餐一味，皆有来处</div></div>
+    </section>
+    <section class="season" id="season"><div class="season-inner"><div class="section-heading"><div><div class="section-label">IN SEASON · AUTUMN</div><h2>此时此味</h2></div><div class="season-aside">秋日菜单 · 每日随鲜更新 · 价格仅供参考</div></div>
+      <div class="dishes">
+        <article class="dish"><div class="dish-image"><img src="https://images.unsplash.com/photo-1515003197210-e0cd7184f8b5?auto=format&fit=crop&w=900&q=85" alt="时令河鲜与清鲜蔬菜"/></div><div class="dish-meta"><h3>松茸慢炖鸡汤</h3><span class="origin">云南 · 香格里拉</span><span class="price">¥ 128 / 份</span></div><p>高山松茸与散养土鸡，慢火见真味。</p></article>
+        <article class="dish"><div class="dish-image"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85" alt="当季手作蔬食"/></div><div class="dish-meta"><h3>秋野时蔬拼盘</h3><span class="origin">浙江 · 临安</span><span class="price">¥ 48 / 份</span></div><p>晨间采撷的秋菜，佐以自制青梅醋。</p></article>
+        <article class="dish"><div class="dish-image"><img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=85" alt="主厨精心制作的当代中式菜肴"/></div><div class="dish-meta"><h3>炭烤东海黄鱼</h3><span class="origin">浙江 · 舟山</span><span class="price">¥ 188 / 条</span></div><p>海风入味，炭火轻烤，佐以陈年花雕。</p></article>
+      </div>
+      <a class="text-link" href="#reserve">查看完整菜单 <span>→</span></a>
+    </div></section>
+    <section class="experience" id="experience"><div class="experience-image"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=85" alt="为相聚而准备的餐桌与空间"/></div><div class="experience-copy"><div class="section-label">THE EXPERIENCE</div><h2>把喜欢的人，约到一张餐桌旁。</h2><p>有热茶、有好菜，也有不着急结束的聊天时光。无论是和家人吃顿寻常晚饭，还是与老朋友久别重逢，我们都为你留好一席温暖，让每一次相聚都轻松自在，带着满足的心情回家。</p><div class="facts"><div class="fact"><strong>12</strong><span>私享包间</span></div><div class="fact"><strong>8—10</strong><span>人均建议</span></div><div class="fact"><strong>每日</strong><span>新鲜到店</span></div></div></div></section>
+    <section class="booking" id="reserve"><div class="booking-inner"><div><h2>好味道，值得一席相约。</h2><p>每日 11:30—14:00 · 17:30—22:00 &nbsp; / &nbsp; 建议提前预约</p></div><a href="tel:057186880688">预约席位 &nbsp; +86 571 8688 0688</a></div></section>
+  </main>
+  <footer id="visit"><div class="footer-brand">山海里 · SHAN HAI LI</div><span>杭州市上城区湖滨路 88 号</span><span>0571 8688 0688</span><span>© 2025 山海里餐饮</span></footer>
+  <script>const toggle=document.querySelector('.menu-toggle');const nav=document.querySelector('#navigation');toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'×':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));</script>
+</body>
+</html>
